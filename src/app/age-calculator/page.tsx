@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback, useEffect, useMemo } from "react";
+import Link from "next/link";
 
 const MONTHS = [
   "January", "February", "March", "April", "May", "June",
@@ -105,8 +106,8 @@ const DAY_OPTIONS = Array.from({ length: 31 }, (_, i) => i + 1);
 
 function Logo() {
   return (
-    <div className="flex items-center gap-2.5">
-      <div className="relative w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 dark:from-blue-400 dark:to-indigo-500 flex items-center justify-center shadow-lg shadow-blue-500/20 dark:shadow-blue-500/10">
+    <Link href="/" className="flex items-center gap-2.5 group cursor-pointer">
+      <div className="relative w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 dark:from-blue-400 dark:to-indigo-500 flex items-center justify-center shadow-lg shadow-blue-500/20 dark:shadow-blue-500/10 group-hover:scale-105 transition-transform">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
           <line x1="16" y1="2" x2="16" y2="6" />
@@ -119,7 +120,7 @@ function Logo() {
         <span className="text-base font-bold tracking-tight text-zinc-800 dark:text-white">AgeCalc</span>
         <span className="block text-[10px] font-medium text-zinc-400 dark:text-zinc-500 tracking-wider uppercase">Precision Tool</span>
       </div>
-    </div>
+    </Link>
   );
 }
 
@@ -215,6 +216,12 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-4 h-14 flex items-center justify-between">
           <Logo />
           <div className="flex items-center gap-3">
+            <Link href="/standard-calculator" className="text-sm font-medium text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200 hidden sm:block">
+              Standard Calculator
+            </Link>
+            <Link href="/bmi-calculator" className="text-sm font-medium text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200 hidden sm:block">
+              BMI Calculator
+            </Link>
             <button
               onClick={toggleTheme}
               className="w-8 h-8 rounded-lg flex items-center justify-center border border-zinc-200 dark:border-zinc-700 text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300 hover:border-zinc-300 dark:hover:border-zinc-600 transition-all duration-200"
