@@ -14,8 +14,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Age Calculator - Calculate Your Exact Age",
-  description: "Calculate your exact age in years, months, days, hours, and more. Free online age calculator tool.",
+  title: {
+    template: "%s | All-Calculator",
+    default: "All Your Calculations in One Place",
+  },
+  description: "Calculate your exact age, BMI, currency conversions, truck volume, and standard math. Free online calculator tools.",
 };
 
 export default function RootLayout({

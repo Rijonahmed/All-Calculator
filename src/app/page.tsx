@@ -5,7 +5,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen bg-zinc-50 dark:bg-[#0f1525] items-center justify-center p-4">
       <div className="max-w-3xl w-full text-center space-y-10">
         <div>
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-zinc-900 dark:text-white mb-4">Precision Tools</h1>
+          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-zinc-900 dark:text-white mb-4">All Your Calculations in One Place</h1>
           <p className="text-lg text-zinc-500 dark:text-zinc-400 max-w-xl mx-auto">Choose a calculator below to get started with precise and accurate measurements.</p>
         </div>
         
@@ -77,6 +77,18 @@ export default function Home() {
             </div>
             <h2 className="text-2xl font-semibold text-zinc-800 dark:text-zinc-100 mb-3 group-hover:text-yellow-600 dark:group-hover:text-yellow-400 transition-colors">Truck Calculator</h2>
             <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">Calculate exactly how much sand or soil your dump truck can carry.</p>
+          </Link>
+
+          <Link href="/area-calculator" className="group flex flex-col items-center p-8 bg-white dark:bg-zinc-900/80 rounded-3xl border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div className="w-20 h-20 mb-6 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 dark:from-cyan-400 dark:to-blue-500 flex items-center justify-center shadow-lg shadow-cyan-500/20 group-hover:scale-110 transition-transform duration-300">
+               <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                  <path d="M3 9h18" />
+                  <path d="M9 21V9" />
+               </svg>
+            </div>
+            <h2 className="text-2xl font-semibold text-zinc-800 dark:text-zinc-100 mb-3 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">Area Calculator</h2>
+            <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">Calculate room and house area instantly in square feet and square meters.</p>
           </Link>
         </div>
       </div>

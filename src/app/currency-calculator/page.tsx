@@ -44,7 +44,7 @@ export default function CurrencyCalculator() {
   
   const [amount, setAmount] = useState("100");
   const [fromCurrency, setFromCurrency] = useState("USD");
-  const [toCurrency, setToCurrency] = useState("BDT");
+  const [toCurrency, setToCurrency] = useState("EUR");
   
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");

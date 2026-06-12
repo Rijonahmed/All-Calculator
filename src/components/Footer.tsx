@@ -16,7 +16,7 @@ export default function Footer() {
             &copy; {currentYear} Precision Tools.
           </span>
         </div>
-        
+
         <div className="flex flex-wrap justify-center gap-6">
           <Link href="/" className="text-sm font-medium text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors">
             Home
