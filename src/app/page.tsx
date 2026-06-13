@@ -90,6 +90,32 @@ export default function Home() {
             <h2 className="text-2xl font-semibold text-zinc-800 dark:text-zinc-100 mb-3 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">Area Calculator</h2>
             <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">Calculate room and house area instantly in square feet and square meters.</p>
           </Link>
+
+          <Link href="/mileage-calculator" className="group flex flex-col items-center p-8 bg-white dark:bg-zinc-900/80 rounded-3xl border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div className="w-20 h-20 mb-6 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 dark:from-indigo-400 dark:to-purple-500 flex items-center justify-center shadow-lg shadow-indigo-500/20 group-hover:scale-110 transition-transform duration-300">
+               <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="3" y1="22" x2="21" y2="22" />
+                  <line x1="4" y1="9" x2="14" y2="9" />
+                  <path d="M14 22V4a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v18" />
+                  <path d="M14 13h2a2 2 0 0 1 2 2v2a2 2 0 0 0 2 2h0a2 2 0 0 0 2-2V9.83a2 2 0 0 0-.59-1.42L18 5" />
+               </svg>
+            </div>
+            <h2 className="text-2xl font-semibold text-zinc-800 dark:text-zinc-100 mb-3 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Mileage Calculator</h2>
+            <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">Calculate your vehicle's fuel efficiency, total fuel required, and trip costs.</p>
+          </Link>
+          <Link href="/inheritance-calculator" className="group flex flex-col items-center p-8 bg-white dark:bg-zinc-900/80 rounded-3xl border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <div className="w-20 h-20 mb-6 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-600 dark:from-pink-400 dark:to-rose-500 flex items-center justify-center shadow-lg shadow-pink-500/20 group-hover:scale-110 transition-transform duration-300">
+               <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/>
+                  <path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/>
+                  <path d="M7 21h10"/>
+                  <path d="M12 3v18"/>
+                  <path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/>
+               </svg>
+            </div>
+            <h2 className="text-2xl font-semibold text-zinc-800 dark:text-zinc-100 mb-3 group-hover:text-pink-600 dark:group-hover:text-pink-400 transition-colors text-center">Inheritance Calculator</h2>
+            <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed text-center">Calculate property distribution for Bangladesh, India, and USA inheritance laws.</p>
+          </Link>
         </div>
       </div>
     </div>
