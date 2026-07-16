@@ -138,11 +138,11 @@ const calculators = [
 export default function Home() {
   return (
     <div className="flex flex-col flex-1">
-      <section className="relative overflow-hidden bg-zinc-50 dark:bg-[#0f1525] px-4 pt-16 pb-20 sm:pt-20 sm:pb-28">
+      <section className="relative overflow-hidden bg-zinc-50 dark:bg-[#0f1525] px-4 sm:px-8 pt-16 sm:pt-24 pb-16 sm:pb-24">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-blue-500/5 dark:bg-blue-400/5 blur-3xl" />
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full bg-violet-500/5 dark:bg-violet-400/5 blur-3xl" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-blue-500/3 via-transparent to-purple-500/3 dark:from-blue-400/3 dark:to-purple-400/3 blur-3xl" />
+          <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-blue-500/5 dark:bg-blue-400/5 blur-3xl" />
+          <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-violet-500/5 dark:bg-violet-400/5 blur-3xl" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-gradient-to-br from-blue-500/3 via-transparent to-purple-500/3 dark:from-blue-400/3 dark:to-purple-400/3 blur-3xl" />
         </div>
 
         <div className="relative max-w-4xl mx-auto text-center">
@@ -151,28 +151,28 @@ export default function Home() {
             Free &amp; Unlimited Tools
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-zinc-900 dark:text-white mb-5 leading-[1.1]">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-zinc-900 dark:text-white mb-5 leading-[1.1]">
             All Your Calculations{" "}
             <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 dark:from-blue-400 dark:via-indigo-400 dark:to-purple-400 bg-clip-text text-transparent">
               in One Place
             </span>
           </h1>
 
-          <p className="text-base sm:text-lg text-zinc-500 dark:text-zinc-400 max-w-xl mx-auto mb-8 leading-relaxed">
+          <p className="text-sm sm:text-lg text-zinc-500 dark:text-zinc-400 max-w-2xl mx-auto mb-8 leading-relaxed">
             Free online calculators for age, BMI, currency, area, mileage, inheritance, and more. Fast, accurate, and no sign-up required.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <Link
               href="#calculators"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 font-semibold text-sm shadow-lg shadow-zinc-900/20 dark:shadow-white/10 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-200"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 font-semibold text-sm shadow-lg shadow-zinc-900/20 dark:shadow-white/10 hover:-translate-y-0.5 hover:shadow-xl transition-all duration-200"
             >
               Explore Tools
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
             </Link>
             <Link
               href="/about"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 font-semibold text-sm hover:border-zinc-300 dark:hover:border-zinc-600 hover:-translate-y-0.5 transition-all duration-200"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-white dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 font-semibold text-sm hover:border-zinc-300 dark:hover:border-zinc-600 hover:-translate-y-0.5 transition-all duration-200"
             >
               Learn More
             </Link>
@@ -180,43 +180,43 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="calculators" className="flex-1 bg-zinc-50 dark:bg-[#0f1525] px-4 pb-20 sm:pb-28">
+      <section id="calculators" className="flex-1 bg-zinc-50 dark:bg-[#0f1525] px-4 sm:px-8 pt-16 sm:pt-24 pb-20 sm:pb-28">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-3">
+          <div className="text-center mb-10 sm:mb-14">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-zinc-900 dark:text-white mb-3">
               Choose a Calculator
             </h2>
-            <p className="text-sm text-zinc-500 dark:text-zinc-400 max-w-lg mx-auto">
+            <p className="text-sm sm:text-base text-zinc-500 dark:text-zinc-400 max-w-lg mx-auto">
               Select from our collection of free, accurate calculator tools for every need.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
             {calculators.map((calc) => (
               <Link
                 key={calc.href}
                 href={calc.href}
-                className="group flex flex-col items-center p-7 bg-white dark:bg-zinc-900/80 rounded-3xl border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className="group flex flex-col items-center p-6 sm:p-7 bg-white dark:bg-zinc-900/80 rounded-2xl sm:rounded-3xl border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
                 <div
-                  className={`w-20 h-20 mb-6 rounded-2xl bg-gradient-to-br ${calc.gradient} flex items-center justify-center shadow-lg ${calc.shadow} group-hover:scale-110 transition-transform duration-300`}
+                  className={`w-16 h-16 sm:w-[4.5rem] sm:h-[4.5rem] lg:w-20 lg:h-20 mb-5 lg:mb-6 rounded-2xl bg-gradient-to-br ${calc.gradient} flex items-center justify-center shadow-lg ${calc.shadow} group-hover:scale-110 transition-transform duration-300`}
                 >
                   {calc.icon}
                 </div>
                 <h3
-                  className={`text-lg font-semibold text-zinc-800 dark:text-zinc-100 mb-3 ${calc.hover} transition-colors text-center`}
+                  className={`text-base sm:text-lg font-semibold text-zinc-800 dark:text-zinc-100 mb-2 sm:mb-3 ${calc.hover} transition-colors text-center`}
                 >
                   {calc.title}
                 </h3>
-                <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed text-center">
+                <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed text-center">
                   {calc.description}
                 </p>
               </Link>
             ))}
           </div>
 
-          <div className="mt-16 text-center">
-            <p className="text-xs text-zinc-400 dark:text-zinc-500">
+          <div className="mt-14 sm:mt-16 text-center">
+            <p className="text-xs sm:text-sm text-zinc-400 dark:text-zinc-500">
               All tools are free to use &bull; No registration required &bull; Works on all devices
             </p>
           </div>

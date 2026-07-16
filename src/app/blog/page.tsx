@@ -1,11 +1,18 @@
 import Link from "next/link";
 import { getAllPosts, getAllTags } from "@/lib/blog";
 
-export const dynamic = "force-static";
-
-export default function BlogPage() {
-  const posts = getAllPosts();
+export default async function BlogPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ tag?: string }>;
+}) {
+  const { tag } = await searchParams;
+  const allPosts = getAllPosts();
   const tags = getAllTags();
+
+  const posts = tag
+    ? allPosts.filter((post) => post.tags.includes(tag))
+    : allPosts;
 
   return (
     <div className="flex-1 bg-zinc-50 dark:bg-[#0f1525] p-4 sm:p-8 md:p-12">
@@ -26,14 +33,48 @@ export default function BlogPage() {
 
         {tags.length > 0 && (
           <div className="flex flex-wrap justify-center gap-2 mb-10">
-            {tags.map((tag) => (
-              <span
-                key={tag}
-                className="px-3 py-1 rounded-full bg-white dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700 text-xs font-medium text-zinc-600 dark:text-zinc-400"
+            <Link
+              href="/blog"
+              scroll={false}
+              className={`px-3 py-1 rounded-full text-xs font-medium transition-all duration-200 ${
+                !tag
+                  ? "bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 border border-zinc-900 dark:border-white"
+                  : "bg-white dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:border-zinc-300 dark:hover:border-zinc-600 hover:text-zinc-800 dark:hover:text-zinc-200"
+              }`}
+            >
+              All
+            </Link>
+            {tags.map((t) => (
+              <Link
+                key={t}
+                href={tag === t ? "/blog" : `/blog?tag=${t}`}
+                scroll={false}
+                className={`px-3 py-1 rounded-full text-xs font-medium transition-all duration-200 ${
+                  tag === t
+                    ? "bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 border border-zinc-900 dark:border-white"
+                    : "bg-white dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:border-zinc-300 dark:hover:border-zinc-600 hover:text-zinc-800 dark:hover:text-zinc-200"
+                }`}
               >
-                {tag}
-              </span>
+                {t}
+              </Link>
             ))}
+          </div>
+        )}
+
+        {tag && (
+          <div className="text-center mb-8">
+            <p className="text-sm text-zinc-500 dark:text-zinc-400">
+              Showing {posts.length} post{posts.length !== 1 ? "s" : ""} tagged{" "}
+              <span className="font-semibold text-zinc-700 dark:text-zinc-300">&quot;{tag}&quot;</span>
+              {" "}
+              <Link
+                href="/blog"
+                scroll={false}
+                className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
+              >
+                Clear filter
+              </Link>
+            </p>
           </div>
         )}
 
@@ -46,12 +87,12 @@ export default function BlogPage() {
             >
               <div className="p-6 flex flex-col flex-1">
                 <div className="flex items-center gap-2 mb-3">
-                  {post.tags.slice(0, 2).map((tag) => (
+                  {post.tags.slice(0, 2).map((t) => (
                     <span
-                      key={tag}
+                      key={t}
                       className="px-2 py-0.5 rounded-md bg-zinc-100 dark:bg-zinc-800 text-[10px] font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-wider"
                     >
-                      {tag}
+                      {t}
                     </span>
                   ))}
                 </div>
@@ -81,7 +122,14 @@ export default function BlogPage() {
 
         {posts.length === 0 && (
           <div className="text-center py-20">
-            <p className="text-zinc-500 dark:text-zinc-400">No blog posts yet. Check back soon!</p>
+            <p className="text-zinc-500 dark:text-zinc-400">No posts found for this tag.</p>
+            <Link
+              href="/blog"
+              scroll={false}
+              className="mt-3 inline-block text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium"
+            >
+              Show all posts
+            </Link>
           </div>
         )}
 
