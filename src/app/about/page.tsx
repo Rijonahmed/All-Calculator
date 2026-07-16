@@ -14,7 +14,7 @@ export default function About() {
               <line x1="3" y1="10" x2="21" y2="10" />
             </svg>
           </Link>
-          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-zinc-900 dark:text-white mb-4">About Precision Tools</h1>
+          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-zinc-900 dark:text-white mb-4">About All Calculator Tools</h1>
           <p className="text-lg text-zinc-500 dark:text-zinc-400 max-w-2xl mx-auto">
             Welcome to your ultimate hub for free, accurate, and easy-to-use online calculators. Whether you need to manage your health, finances, or construction projects, we've got you covered.
           </p>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
 import Script from "next/script";
@@ -20,6 +21,9 @@ export const metadata: Metadata = {
     default: "All Your Calculations in One Place",
   },
   description: "Calculate your exact age, BMI, currency conversions, truck volume, and standard math. Free online calculator tools.",
+  icons: {
+    icon: "/fav.png",
+  },
 };
 
 export default function RootLayout({
@@ -34,6 +38,8 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        <meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXXXXX" />
+        <meta name="p:domain_verify" content="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -53,6 +59,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col">
+        <Header />
         {children}
         <Footer />
         <Script

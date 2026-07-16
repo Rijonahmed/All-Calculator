@@ -97,38 +97,7 @@ export default function InheritanceCalculator() {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen bg-zinc-50 dark:bg-[#0f1525] print:bg-white transition-colors duration-300">
-      <header className="pt-8 pb-4 px-4 border-b border-zinc-200 dark:border-zinc-800 bg-white/50 dark:bg-zinc-950/50 backdrop-blur-md sticky top-0 z-10 print:hidden">
-        <div className="max-w-5xl mx-auto flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 px-4 py-2 rounded-xl bg-zinc-100 hover:bg-zinc-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 transition-colors text-sm font-semibold text-zinc-700 dark:text-zinc-300">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-            {t.backHome}
-          </Link>
-          <div className="flex items-center gap-4">
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors text-zinc-600 dark:text-zinc-400"
-              aria-label="Toggle theme"
-            >
-              {theme === "dark" ? (
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></svg>
-              ) : (
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-              )}
-            </button>
-            {/* Language Toggle */}
-            <button 
-              onClick={toggleLang}
-              className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors text-sm font-semibold text-zinc-700 dark:text-zinc-300"
-            >
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
-              {lang === "en" ? "EN" : "BN"}
-            </button>
-          </div>
-        </div>
-      </header>
-
-      <main className="flex-1 px-4 py-8 sm:py-12">
+      <main className="flex-1 px-4 py-8 sm:py-12 bg-zinc-50 dark:bg-[#0f1525]">
         <div className="max-w-5xl mx-auto">
           
           {/* Clickable Step Indicator */}
@@ -204,6 +173,5 @@ export default function InheritanceCalculator() {
           </div>
         </div>
       </main>
-    </div>
   );
 }
